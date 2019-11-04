@@ -131,12 +131,12 @@ class Aliens {
         this.alphabet_length = this.alphabet.length;
 
         this.alphabet.forEach(function(element, i) {
-            if (i != this.alphabet_length - 1) {
+            if (element) {
                 this.alphabet_string += element + " ";
-            } else {
-                this.alphabet_string += element;
             }
         }.bind(this));
+
+        this.alphabet_string = this.alphabet_string.trim();
     }
 
     print() {
